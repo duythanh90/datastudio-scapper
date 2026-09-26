@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Looker Studio Data Scraper - Bao Cao An Ca",
+  "version": "1.0.0",
+  "description": "Trích xuất dữ liệu bảng biểu, chỉ số từ báo cáo Google Looker Studio ra CSDL SQLite, Excel, CSV",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://datastudio.google.com/*",
+    "https://lookerstudio.google.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Scrape Looker Studio Data"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://datastudio.google.com/*",
+        "https://lookerstudio.google.com/*"
+      ],
+      "css": ["content.css"],
+      "js": ["xlsx.full.min.js", "socket.io.min.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

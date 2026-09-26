@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# SQLite Database & log files
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+server/bao_cao_an_ca.sqlite*
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.log
+.env

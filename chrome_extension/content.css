@@ -1,0 +1,188 @@
+/* Floating Widget Styling on Looker Studio Page */
+#looker-scraper-floating-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 320px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+#looker-scraper-floating-widget.minimized {
+  width: auto;
+  padding: 8px 14px;
+}
+
+#looker-scraper-floating-widget .widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
+}
+
+#looker-scraper-floating-widget .widget-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#looker-scraper-floating-widget .ls-socket-badge {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+#looker-scraper-floating-widget .ls-socket-badge.online {
+  background: #064e3b;
+  color: #34d399;
+  border: 1px solid #059669;
+}
+
+#looker-scraper-floating-widget .ls-socket-badge.offline {
+  background: #7f1d1d;
+  color: #fca5a5;
+  border: 1px solid #dc2626;
+}
+
+#looker-scraper-floating-widget .ls-btn-auto {
+  background: #334155;
+  color: #94a3b8;
+  border: 1px dashed #475569;
+}
+
+#looker-scraper-floating-widget .ls-btn-auto.active {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  border: 1px solid #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+}
+
+#looker-scraper-floating-widget .ls-auto-timer-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a855f7;
+  background: #2e1065;
+  border: 1px solid #581c87;
+  padding: 5px 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#looker-scraper-floating-widget .widget-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+#looker-scraper-floating-widget .widget-toggle-btn:hover {
+  color: #f8fafc;
+  background: #334155;
+}
+
+#looker-scraper-floating-widget .widget-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#looker-scraper-floating-widget .ls-btn {
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+#looker-scraper-floating-widget .ls-btn-primary {
+  background: linear-gradient(135deg, #0284c7, #2563eb);
+  color: white;
+}
+
+#looker-scraper-floating-widget .ls-btn-primary:hover {
+  background: linear-gradient(135deg, #0369a1, #1d4ed8);
+}
+
+#looker-scraper-floating-widget .ls-btn-sqlite {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+}
+
+#looker-scraper-floating-widget .ls-btn-sqlite:hover {
+  background: linear-gradient(135deg, #047857, #059669);
+}
+
+#looker-scraper-floating-widget .ls-btn-secondary {
+  background: #334155;
+  color: #f8fafc;
+}
+
+#looker-scraper-floating-widget .ls-btn-secondary:hover {
+  background: #475569;
+}
+
+#looker-scraper-floating-widget .ls-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#looker-scraper-floating-widget .ls-status {
+  font-size: 11px;
+  color: #cbd5e1;
+  background: #1e293b;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  min-height: 28px;
+}
+
+#looker-scraper-floating-widget .ls-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+#looker-scraper-floating-widget .ls-stat-box {
+  background: #1e293b;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#looker-scraper-floating-widget .ls-stat-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+#looker-scraper-floating-widget .ls-stat-lbl {
+  font-size: 9px;
+  color: #94a3b8;
+}

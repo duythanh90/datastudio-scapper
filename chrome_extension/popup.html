@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Looker Studio Scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="header-icon">📊</div>
+    <div>
+      <h1>Looker Studio Scraper</h1>
+      <p>Trích xuất & Lưu CSDL SQLite</p>
+    </div>
+  </div>
+
+  <button id="btnScrapeAll" class="btn btn-primary">
+    <span>🔄 Trích xuất Tất cả các Trang</span>
+  </button>
+
+  <button id="btnScrapeSingle" class="btn btn-csv" style="margin-bottom: 12px;">
+    <span>⚡ Trích xuất Trang hiện tại</span>
+  </button>
+
+  <div id="statusCard" class="status-card" style="display: none;">
+    <div class="status-title">Trạng thái trích xuất</div>
+    <div id="statusInfo" class="status-info">Đã sẵn sàng</div>
+    
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div id="statTables" class="stat-value">0</div>
+        <div class="stat-label">Trang / Phân trang</div>
+      </div>
+      <div class="stat-item">
+        <div id="statLines" class="stat-value">0</div>
+        <div class="stat-label">Tổng số dòng</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="actionsGroup" class="actions-group" style="display: none;">
+    <button id="btnSaveSqlite" class="btn btn-primary" style="background: linear-gradient(135deg, #059669, #10b981);">
+      <span>💾 Lưu vào CSDL SQLite</span>
+    </button>
+    <button id="btnExcel" class="btn btn-excel">
+      <span>📥 Tải File Excel (.xlsx)</span>
+    </button>
+    <button id="btnCsv" class="btn btn-csv">
+      <span>📄 Tải File CSV (.csv)</span>
+    </button>
+    <button id="btnJson" class="btn btn-csv">
+      <span>📋 Sao chép JSON</span>
+    </button>
+  </div>
+
+  <div id="previewContainer" class="preview-container" style="display: none;">
+    <!-- Preview data will be rendered here -->
+  </div>
+
+  <script src="xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
